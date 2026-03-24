@@ -23,7 +23,7 @@ export default function Main() {
         </p>
       </div>
       <AppPlayer
-        src={`${import.meta.env.BASE_URL}main.mov`}
+        src={`${import.meta.env.BASE_URL}main.mp4`}
         isPlaying
         loop
         muted
