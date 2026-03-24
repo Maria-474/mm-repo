@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/maria-474.github.io/',
+  base: '/maria-474.github.io/mm-repo',
   plugins: [react()],
   resolve: {
     alias: {
