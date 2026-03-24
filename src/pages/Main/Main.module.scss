@@ -1,0 +1,38 @@
+.mainWrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  height: 565px;
+  background-color: rgba(11, 11, 15, 0.6);
+}
+
+.mainDescription {
+  margin: 0 auto 48px;
+  max-width: 1024px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.mainLink {
+  color: var(--color-link);
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.mainPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

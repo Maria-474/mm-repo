@@ -1,0 +1,22 @@
+.quizAnswerButton {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-button-bg);
+  transition:
+    color 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+
+  &:not(:disabled):hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.quizAnswerButtonCorrect,
+.quizAnswerButtonCorrect:hover {
+  background: green;
+}
+
+.quizAnswerButtonIncorrect,
+.quizAnswerButtonIncorrect:hover {
+  background: red;
+}

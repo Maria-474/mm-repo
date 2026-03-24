@@ -1,0 +1,22 @@
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5) rotate(15deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

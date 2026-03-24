@@ -1,0 +1,13 @@
+.quizPageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 120px;
+}
+
+.quizPageDescription {
+  max-width: 800px;
+  font-size: 24px;
+  text-align: center;
+}

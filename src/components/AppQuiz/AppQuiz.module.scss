@@ -1,0 +1,12 @@
+.quizWrapper {
+  position: relative;
+  width: 800px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}

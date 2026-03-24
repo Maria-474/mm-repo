@@ -1,0 +1,57 @@
+.contextMenuWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.housesLink {
+  color: var(--color-link);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.housesLinkActive {
+  position: relative;
+  color: var(--color-link-hover);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-link-hover);
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.contextMenuList {
+  position: absolute;
+  top: 32px;
+  left: -24px;
+  z-index: 10;
+  display: none;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-button-bg);
+}
+
+.contextMenuListShown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contextMenuItem {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-bg-elevated);
+  }
+}

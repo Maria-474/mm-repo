@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Cera;
+  src: local('Cera-Light'), url('@/assets/fonts/Cera-Light.woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cera;
+  src: local('Cera-Regular'), url('@/assets/fonts/Cera-Regular.woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cera;
+  src: local('Cera-Medium'), url('@/assets/fonts/Cera-Medium.woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cera;
+  src: local('Cera-Bold'), url('@/assets/fonts/Cera-Bold.woff2');
+  font-weight: 700;
+  font-display: swap;
+}

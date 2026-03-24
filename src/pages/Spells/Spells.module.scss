@@ -1,0 +1,47 @@
+.spellsWrapper {
+  display: flex;
+  max-height: 600px;
+}
+
+.spellsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.spellDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 50%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .spellsWrapper {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .spellsWrapper {
+    flex-direction: column;
+    max-height: initial;
+  }
+
+  .spellsList,
+  .spellDescription {
+    width: 100%;
+  }
+
+  .spellsList {
+    max-height: 200px;
+  }
+
+  .spellDescription {
+    padding: 32px;
+  }
+}

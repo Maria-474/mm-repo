@@ -1,0 +1,27 @@
+:root {
+  /* Фон */
+  --color-bg: #0b0b0f;
+  --color-bg-panel: #14141c;
+  --color-bg-elevated: #1c1c26;
+
+  /* Текст */
+  --color-text: #ffffff;
+  --color-text-secondary: #b3b3c6;
+  --color-text-muted: #6b6b80;
+
+  /* Ссылки и акценты */
+  --color-link: #7b61ff;
+  --color-link-hover: #ff4fd8;
+  --color-accent: linear-gradient(135deg, #7b61ff, #ff4fd8);
+
+  /* Кнопки */
+  --color-button-bg: linear-gradient(
+    26.57deg,
+    #3c1a70 0%,
+    rgba(93, 14, 245, 0.83)
+  );
+  --color-button-text: #ffffff;
+
+  /* Разделители */
+  --color-border: #3a2b46;
+}
