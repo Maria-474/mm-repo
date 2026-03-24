@@ -11,7 +11,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "У меня 12 собак", "isCorrect": true }
     ],
     "modalShowTimeout": 10900,
-    "videoSrc": `${import.meta.env.BASE_URL}Q1.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q1.mp4`
   },
   {
     "id": "02",
@@ -23,7 +23,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Ты не ушибся?", "isCorrect": false }
     ],
     "modalShowTimeout": 18200,
-    "videoSrc": `${import.meta.env.BASE_URL}Q2.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q2.mp4`
   },
   {
     "id": "03",
@@ -35,7 +35,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Да, и навозным жукам", "isCorrect": true }
     ],
     "modalShowTimeout": 9800,
-    "videoSrc": `${import.meta.env.BASE_URL}Q3.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q3.mp4`
   },
   {
     "id": "04",
@@ -47,7 +47,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Это наш новый преподаватель", "isCorrect": false }
     ],
     "modalShowTimeout": 12700,
-    "videoSrc": `${import.meta.env.BASE_URL}Q4.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q4.mp4`
   },
   {
     "id": "05",
@@ -59,7 +59,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Гримм", "isCorrect": true }
     ],
     "modalShowTimeout": 12800,
-    "videoSrc": `${import.meta.env.BASE_URL}Q5.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q5.mp4`
   },
   {
     "id": "06",
@@ -71,7 +71,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Клоун", "isCorrect": false }
     ],
     "modalShowTimeout": 14800,
-    "videoSrc": `${import.meta.env.BASE_URL}Q6.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q6.mp4`
   },
   {
     "id": "07",
@@ -82,8 +82,8 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "394", "isCorrect": true },
       { "text": "541", "isCorrect": false }
     ],
-    "modalShowTimeout": 13300,
-    "videoSrc": `${import.meta.env.BASE_URL}Q7.mov`
+    "modalShowTimeout": 13400,
+    "videoSrc": `${import.meta.env.BASE_URL}Q7.mp4`
   },
   {
     "id": "08",
@@ -95,7 +95,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Авада кедавра", "isCorrect": false }
     ],
     "modalShowTimeout": 8700,
-    "videoSrc": `${import.meta.env.BASE_URL}Q8.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q8.mp4`
   },
   {
     "id": "09",
@@ -107,6 +107,6 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Первый полет на метле", "isCorrect": true }
     ],
     "modalShowTimeout": 14100,
-    "videoSrc": `${import.meta.env.BASE_URL}Q9.mov`
+    "videoSrc": `${import.meta.env.BASE_URL}Q9.mp4`
   },
 ]
