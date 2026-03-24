@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mm-repo/">
       <AppHeader />
       <Routes>
         <Route path="/" element={<Main />} />
