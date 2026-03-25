@@ -4,19 +4,21 @@
   align-items: center;
   margin: auto;
   width: fit-content;
+  color: var(--color-link);
   animation: loading 1s infinite linear;
 }
 
 @keyframes loading {
   0% {
-    transform: scale(1);
+    color: var(--color-link);
   }
 
   50% {
-    transform: scale(1.5) rotate(15deg);
+    transform: rotate(15deg) translate(10px, 30px);
+    color: var(--color-link-hover);
   }
 
   100% {
-    transform: scale(1);
+    color: var(--color-link);
   }
 }

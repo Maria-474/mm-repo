@@ -1,13 +1,16 @@
 import ReactPlayer from 'react-player'
+import AppLoader from '@/components/AppLoader/AppLoader'
+import { useState } from 'react'
+import classes from './AppPlayer.module.scss'
+import clsx from 'clsx'
 
 type AppPlayerProps = {
   src: string
   isPlaying: boolean
   loop?: boolean
   muted?: boolean
-  width?: string
-  height?: string
   className?: string
+  onTimeUpdate?: (currentTime: number) => void
   onEnded?: () => void
 }
 
@@ -16,21 +19,36 @@ export default function AppPlayer({
   isPlaying,
   loop = false,
   muted = false,
-  width = '800px',
-  height = '452px',
   className,
+  onTimeUpdate,
   onEnded
 }: AppPlayerProps) {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const currentTime = e.currentTarget.currentTime
+
+    onTimeUpdate?.(currentTime)
+  }
+
   return (
-    <ReactPlayer
-      src={src}
-      width={width}
-      height={height}
-      playing={isPlaying}
-      onEnded={onEnded}
-      loop={loop}
-      muted={muted}
-      className={className}
-    />
+    <div className={clsx(classes.playerWrapper, className)}>
+      <ReactPlayer
+        src={src}
+        style={{ width: '100%', height: 'auto', aspectRatio: '16/9' }}
+        playing={isPlaying}
+        onPlaying={() => setIsLoading(false)}
+        onWaiting={() => setIsLoading(true)}
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={onEnded}
+        loop={loop}
+        muted={muted}
+      />
+      {isLoading && (
+        <div className={classes.playerLoaderWrapper}>
+          <AppLoader />
+        </div>
+      )}
+    </div>
   )
 }

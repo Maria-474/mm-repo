@@ -10,7 +10,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "У меня нет желания", "isCorrect": false },
       { "text": "У меня 12 собак", "isCorrect": true }
     ],
-    "modalShowTimeout": 10900,
+    "modalShowTimeout": 10800,
     "videoSrc": `${import.meta.env.BASE_URL}Q1.mp4`
   },
   {
@@ -22,7 +22,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Давай помогу", "isCorrect": false },
       { "text": "Ты не ушибся?", "isCorrect": false }
     ],
-    "modalShowTimeout": 18200,
+    "modalShowTimeout": 18150,
     "videoSrc": `${import.meta.env.BASE_URL}Q2.mp4`
   },
   {
@@ -34,7 +34,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "А я не знал", "isCorrect": false },
       { "text": "Да, и навозным жукам", "isCorrect": true }
     ],
-    "modalShowTimeout": 9800,
+    "modalShowTimeout": 9750,
     "videoSrc": `${import.meta.env.BASE_URL}Q3.mp4`
   },
   {
@@ -46,7 +46,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "О нем писали в газете", "isCorrect": false },
       { "text": "Это наш новый преподаватель", "isCorrect": false }
     ],
-    "modalShowTimeout": 12700,
+    "modalShowTimeout": 12650,
     "videoSrc": `${import.meta.env.BASE_URL}Q4.mp4`
   },
   {
@@ -70,7 +70,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Мячик", "isCorrect": false },
       { "text": "Клоун", "isCorrect": false }
     ],
-    "modalShowTimeout": 14800,
+    "modalShowTimeout": 14600,
     "videoSrc": `${import.meta.env.BASE_URL}Q6.mp4`
   },
   {
@@ -82,7 +82,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "394", "isCorrect": true },
       { "text": "541", "isCorrect": false }
     ],
-    "modalShowTimeout": 13400,
+    "modalShowTimeout": 13200,
     "videoSrc": `${import.meta.env.BASE_URL}Q7.mp4`
   },
   {
@@ -94,7 +94,7 @@ export const quizQuestions: QuizQuestion[] = [
       { "text": "Сокрой свой секрет", "isCorrect": false },
       { "text": "Авада кедавра", "isCorrect": false }
     ],
-    "modalShowTimeout": 8700,
+    "modalShowTimeout": 8600,
     "videoSrc": `${import.meta.env.BASE_URL}Q8.mp4`
   },
   {

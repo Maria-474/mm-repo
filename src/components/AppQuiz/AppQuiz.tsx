@@ -16,10 +16,7 @@ export default function AppQuiz() {
   const [modalMode, setModalMode] = useState<ModalMode | null>('start')
 
   const currentQuestion = useRef<QuizQuestion>(quizQuestions[0])
-
-  const modalShowTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const answerTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
   const correctAnswersCounter = useRef<number>(0)
 
   const isLastQuestion =
@@ -29,15 +26,15 @@ export default function AppQuiz() {
     setIsAnswerTouched(false)
     setModalMode(null)
     setIsPlaying(true)
+  }
 
-    if (modalShowTimeoutRef.current) {
-      clearTimeout(modalShowTimeoutRef.current)
-    }
+  const handleTimeUpdate = (currentTime: number) => {
+    if (isAnswerTouched) return
 
-    modalShowTimeoutRef.current = setTimeout(() => {
+    if (currentTime >= currentQuestion.current.modalShowTimeout / 1000) {
       setIsPlaying(false)
       setModalMode('question')
-    }, currentQuestion.current.modalShowTimeout)
+    }
   }
 
   const onAnswerButtonClick = (isAnswerCorrect: boolean) => {
@@ -81,6 +78,7 @@ export default function AppQuiz() {
       <AppPlayer
         src={currentQuestion.current.videoSrc}
         isPlaying={isPlaying}
+        onTimeUpdate={handleTimeUpdate}
         onEnded={onPlayingEnded}
       />
       <AppModal isModalShown={!!modalMode}>

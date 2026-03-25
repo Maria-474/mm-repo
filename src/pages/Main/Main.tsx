@@ -27,8 +27,6 @@ export default function Main() {
         isPlaying
         loop
         muted
-        width="1000px"
-        height="565px"
         className={classes.mainPlayer}
       />
     </div>
