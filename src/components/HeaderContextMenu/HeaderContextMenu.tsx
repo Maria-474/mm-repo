@@ -7,9 +7,9 @@ type HeaderContextMenuProps = {
   onContextMenuButtonClick: () => void
 }
 
-export default function HeaderContextMenu({
+export const HeaderContextMenu = ({
   onContextMenuButtonClick
-}: HeaderContextMenuProps) {
+}: HeaderContextMenuProps) => {
   const housesLinks = [
     { title: 'Gryffindor', path: '/house/gryffindor' },
     { title: 'Slytherin', path: '/house/slytherin' },
@@ -23,7 +23,7 @@ export default function HeaderContextMenu({
   const [isContextMenuShown, setIsContextMenuShown] = useState(false)
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const hadleMouseEnter = () => {
+  const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current)
     }
@@ -49,7 +49,7 @@ export default function HeaderContextMenu({
           classes.housesLink,
           isHousesLinkActive && classes.housesLinkActive
         )}
-        onMouseEnter={hadleMouseEnter}
+        onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         Houses
@@ -59,7 +59,7 @@ export default function HeaderContextMenu({
           classes.contextMenuList,
           isContextMenuShown && classes.contextMenuListShown
         )}
-        onMouseEnter={hadleMouseEnter}
+        onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         {housesLinks.map((houseLink) => (

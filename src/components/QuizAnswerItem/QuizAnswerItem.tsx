@@ -1,5 +1,5 @@
 import type { QuizAnswer } from '@/types/quiz-answer'
-import classes from './QuizAnswer.module.scss'
+import classes from './QuizAnswerItem.module.scss'
 import clsx from 'clsx'
 import { useState } from 'react'
 
@@ -9,11 +9,11 @@ type QuizAnswerProps = {
   onAnswerClick: (isAnswerCorrect: boolean) => void
 }
 
-export default function QuizAnswer({
+export const QuizAnswerItem = ({
   answer,
   isDisabled,
   onAnswerClick
-}: QuizAnswerProps) {
+}: QuizAnswerProps) => {
   const [isAnswerTouched, setIsAnswerTouched] = useState(false)
 
   const handleAnswerClick = () => {

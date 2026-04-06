@@ -1,6 +1,7 @@
 .buttonWrapper {
   position: relative;
   padding: 8px 12px;
+  width: fit-content;
   border-radius: 8px;
   background: var(--color-button-bg);
   color: var(--color-button-text);
@@ -18,14 +19,12 @@
     transition: border-color 0.3s ease-in-out;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--color-link-hover);
   }
 }
 
 .buttonWrapper:hover,
-.buttonWrapper:focus,
 .buttonWrapperActive {
   &::after {
     border-color: var(--color-link-hover);

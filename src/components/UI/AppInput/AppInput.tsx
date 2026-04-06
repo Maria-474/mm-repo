@@ -6,7 +6,7 @@ type AppInputProps = {
   onInput: (value: string) => void
 }
 
-const AppInput = ({ placeholderText, onInput }: AppInputProps) => {
+export const AppInput = ({ placeholderText, onInput }: AppInputProps) => {
   function handleInput(e: FormEvent<HTMLInputElement>) {
     onInput(e.currentTarget.value)
   }
@@ -19,5 +19,3 @@ const AppInput = ({ placeholderText, onInput }: AppInputProps) => {
     />
   )
 }
-
-export default AppInput

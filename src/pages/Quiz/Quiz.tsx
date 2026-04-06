@@ -1,5 +1,5 @@
-import AppTitle from '@/components/AppTitle/AppTitle'
-import AppQuiz from '@/components/AppQuiz/AppQuiz'
+import { AppTitle } from '@/components/AppTitle'
+import { AppQuiz } from '@/components/AppQuiz'
 import classes from './Quiz.module.scss'
 
 export default function Quiz() {

@@ -6,9 +6,11 @@ type AppModalProps = {
   children: React.ReactNode
 }
 
-export default function AppModal({ isModalShown, children }: AppModalProps) {
+export const AppModal = ({ isModalShown, children }: AppModalProps) => {
   return (
     <div
+      role="dialog"
+      aria-modal
       className={clsx(
         classes.modalWrapper,
         isModalShown && classes.modalWrapperShown

@@ -1,15 +1,16 @@
 import { useStaff } from '@/hooks/useStaff'
-import AppLoader from '@/components/AppLoader/AppLoader'
-import AppTitle from '@/components/AppTitle/AppTitle'
-import PersonList from '@/components/PersonList/PersonList'
+import { AppLoader } from '@/components/AppLoader'
+import { AppTitle } from '@/components/AppTitle'
+import { PersonList } from '@/components/PersonList'
 
 export default function Staff() {
-  const { staff, isLoading } = useStaff()
+  const { data, isLoading, error } = useStaff()
 
   return (
     <div>
       <AppTitle text="Staff" />
-      {isLoading ? <AppLoader /> : <PersonList list={staff} />}
+      {isLoading ? <AppLoader /> : <PersonList list={data} />}
+      {error && <p>{error.message}</p>}
     </div>
   )
 }

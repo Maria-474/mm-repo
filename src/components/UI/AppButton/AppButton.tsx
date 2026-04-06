@@ -7,7 +7,11 @@ type AppButtonProps = {
   onButtonClick: () => void
 }
 
-const AppButton = ({ text, isActive, onButtonClick }: AppButtonProps) => {
+export const AppButton = ({
+  text,
+  isActive,
+  onButtonClick
+}: AppButtonProps) => {
   return (
     <button
       onClick={onButtonClick}
@@ -20,5 +24,3 @@ const AppButton = ({ text, isActive, onButtonClick }: AppButtonProps) => {
     </button>
   )
 }
-
-export default AppButton
