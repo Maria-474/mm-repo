@@ -1,0 +1,1 @@
+export type HouseName = 'gryffindor' | 'slytherin' | 'ravenclaw' | 'hufflepuff'

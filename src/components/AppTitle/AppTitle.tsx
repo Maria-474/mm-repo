@@ -4,8 +4,6 @@ type TitleProps = {
   text: string
 }
 
-const Title = ({ text }: TitleProps) => {
+export const AppTitle = ({ text }: TitleProps) => {
   return <h1 className={classes.title}>{text}</h1>
 }
-
-export default Title

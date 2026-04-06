@@ -1,5 +1,5 @@
 import classes from './QuizNextStep.module.scss'
-import AppButton from '@/components/UI/AppButton/AppButton'
+import { AppButton } from '@/components/UI/AppButton'
 
 type QuizNextStepProps = {
   isLastQuestion: boolean
@@ -8,12 +8,12 @@ type QuizNextStepProps = {
   onNextStepButtonClick: () => void
 }
 
-export default function QuizNextStep({
+export const QuizNextStep = ({
   isLastQuestion,
   correctAnswersCount,
   quizQuestionsCount,
   onNextStepButtonClick
-}: QuizNextStepProps) {
+}: QuizNextStepProps) => {
   const nextStepButtonText = isLastQuestion
     ? 'Начать с начала'
     : 'Следующий вопрос'

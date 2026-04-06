@@ -1,0 +1,1 @@
+export { AppQuiz } from './AppQuiz'

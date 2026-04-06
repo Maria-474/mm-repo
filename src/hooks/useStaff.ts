@@ -1,16 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useCallback } from 'react';
 import { getStaff } from '@/api/staff';
-import { Person } from '@/types/person';
+import useFetch from './useFetch';
 
 export const useStaff = () => {
-  const [staff, setStaff] = useState<Person[]>([]);
-  const [isLoading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getStaff()
-      .then(setStaff)
-      .finally(() => setLoading(false));
-  }, [])
-
-  return { staff, isLoading };
+  const fetcher = useCallback((signal: AbortSignal) => getStaff(signal), []);
+  return useFetch(fetcher)
 }

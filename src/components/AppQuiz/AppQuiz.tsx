@@ -1,18 +1,19 @@
-import AppButton from '@/components/UI/AppButton/AppButton'
-import AppPlayer from '@/components/AppPlayer/AppPlayer'
+import { AppButton } from '@/components/UI/AppButton'
+import { AppPlayer } from '@/components/AppPlayer'
 import { useState, useRef } from 'react'
 import classes from './AppQuiz.module.scss'
 import { QuizQuestion } from '@/types/quiz-question'
 import { quizQuestions } from '@/app/quizQuestions'
-import AppModal from '@/components/AppModal/AppModal'
-import QuizQuestionItem from '@/components/QuizQuestionItem/QuizQuestionItem'
-import QuizNextStep from '@/components/QuizNextStep/QuizNextStep'
+import { AppModal } from '@/components/AppModal'
+import { QuizQuestionItem } from '@/components/QuizQuestionItem'
+import { QuizNextStep } from '@/components/QuizNextStep'
 
-export default function AppQuiz() {
+type ModalMode = 'start' | 'nextStep' | 'question'
+
+export const AppQuiz = () => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isAnswerTouched, setIsAnswerTouched] = useState(false)
 
-  type ModalMode = 'start' | 'nextStep' | 'question'
   const [modalMode, setModalMode] = useState<ModalMode | null>('start')
 
   const currentQuestion = useRef<QuizQuestion>(quizQuestions[0])

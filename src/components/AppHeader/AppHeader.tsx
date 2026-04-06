@@ -1,7 +1,7 @@
 import classes from './AppHeader.module.scss'
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
-import HeaderContextMenu from '@/components/HeaderContextMenu/HeaderContextMenu'
+import { HeaderContextMenu } from '@/components/HeaderContextMenu'
 import { IconBurgerMenu, IconClose } from '@/icons'
 import { useState } from 'react'
 
@@ -10,7 +10,7 @@ interface HeaderLink {
   path: string
 }
 
-export default function Header() {
+export const AppHeader = () => {
   const headerLinks: HeaderLink[] = [
     { title: 'Main', path: '/' },
     { title: 'Quiz', path: '/quiz' },
@@ -24,6 +24,7 @@ export default function Header() {
   return (
     <header>
       <button
+        aria-label="Открыть меню"
         className={classes.burgerMenuButton}
         onClick={() => setIsBurgerMenuOpened(true)}
       >
@@ -36,6 +37,7 @@ export default function Header() {
         )}
       >
         <button
+          aria-label="Закрыть меню"
           className={classes.burgerMenuCloseButton}
           onClick={() => setIsBurgerMenuOpened(false)}
         >

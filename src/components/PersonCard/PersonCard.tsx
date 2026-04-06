@@ -7,12 +7,16 @@ type PersonCardProps = {
   person: Person
 }
 
-export default function PersonCard({ person }: PersonCardProps) {
+export const PersonCard = ({ person }: PersonCardProps) => {
   const [isPersonInfoShown, setPersonInfoShown] = useState(false)
 
   return (
     <div
+      tabIndex={0}
+      role="article"
       className={classes.cardWrapper}
+      onFocus={() => setPersonInfoShown(true)}
+      onBlur={() => setPersonInfoShown(false)}
       onMouseEnter={() => setPersonInfoShown(true)}
       onMouseLeave={() => setPersonInfoShown(false)}
     >

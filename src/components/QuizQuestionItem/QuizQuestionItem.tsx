@@ -1,6 +1,6 @@
 import classes from './QuizQuestionItem.module.scss'
 import { QuizQuestion } from '@/types/quiz-question'
-import QuizAnswer from '@/components/QuizAnswer/QuizAnswer'
+import { QuizAnswerItem } from '@/components/QuizAnswerItem'
 
 type QuizItemProps = {
   currentQuestion: QuizQuestion
@@ -8,17 +8,17 @@ type QuizItemProps = {
   onAnswerButtonClick: (isAnswerCorrect: boolean) => void
 }
 
-export default function QuizQuestionItem({
+export const QuizQuestionItem = ({
   currentQuestion,
   isAnswerTouched,
   onAnswerButtonClick
-}: QuizItemProps) {
+}: QuizItemProps) => {
   return (
     <div className={classes.quizItemWrapper}>
       <p>{currentQuestion.question}</p>
       <div className={classes.answersWrapper}>
         {currentQuestion.answers.map((answer) => (
-          <QuizAnswer
+          <QuizAnswerItem
             key={answer.text}
             answer={answer}
             isDisabled={isAnswerTouched}

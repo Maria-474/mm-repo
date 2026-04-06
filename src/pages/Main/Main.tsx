@@ -1,7 +1,7 @@
-import AppTitle from '@/components/AppTitle/AppTitle'
+import { AppTitle } from '@/components/AppTitle'
 import classes from './Main.module.scss'
 import { NavLink } from 'react-router-dom'
-import AppPlayer from '@/components/AppPlayer/AppPlayer'
+import { AppPlayer } from '@/components/AppPlayer'
 
 export default function Main() {
   return (

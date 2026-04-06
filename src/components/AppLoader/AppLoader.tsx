@@ -1,7 +1,7 @@
 import { IconMagicWand } from '@/icons'
 import classes from './AppLoader.module.scss'
 
-export default function Loader() {
+export const AppLoader = () => {
   return (
     <div className={classes.loaderWrapper}>
       <IconMagicWand />

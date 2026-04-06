@@ -1,16 +1,12 @@
-import { useState, useEffect } from "react"
+import { useCallback } from "react";
 import { getHouse } from "@/api/house"
-import { Person } from "@/types/person"
+import useFetch from "./useFetch"
+import { HouseName } from "@/types/house";
 
-export const useHouse = (houseId: string) => {
-  const [housePersons, setHousePersons] = useState<Person[]>([])
-  const [isLoading, setLoading] = useState(true)
-
-  useEffect(() => {
-    getHouse(houseId)
-    .then(setHousePersons)
-    .finally(() => setLoading(false));
-  }, [houseId])
-
-  return { housePersons, isLoading };
-}
+export const useHouse = (houseId: HouseName) => {
+  const fetcher = useCallback(
+    (signal: AbortSignal) => getHouse(houseId, signal),
+    [houseId]
+  );
+  return useFetch(fetcher);
+};

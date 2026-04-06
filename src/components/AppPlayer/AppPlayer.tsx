@@ -1,5 +1,5 @@
 import ReactPlayer from 'react-player'
-import AppLoader from '@/components/AppLoader/AppLoader'
+import { AppLoader } from '@/components/AppLoader'
 import { useState } from 'react'
 import classes from './AppPlayer.module.scss'
 import clsx from 'clsx'
@@ -14,7 +14,7 @@ type AppPlayerProps = {
   onEnded?: () => void
 }
 
-export default function AppPlayer({
+export const AppPlayer = ({
   src,
   isPlaying,
   loop = false,
@@ -22,7 +22,7 @@ export default function AppPlayer({
   className,
   onTimeUpdate,
   onEnded
-}: AppPlayerProps) {
+}: AppPlayerProps) => {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {

@@ -1,16 +1,8 @@
-import { useState, useEffect } from "react"
+import { useCallback } from "react";
 import { getSpells } from "@/api/spells"
-import { Spell } from "@/types/spell"
+import useFetch from "./useFetch";
 
 export const useSpells = () => {
-  const [spells, setSpells] = useState<Spell[]>([])
-  const [isLoading, setLoading] = useState(true)
-
-  useEffect(() => {
-    getSpells()
-    .then(setSpells)
-    .finally(() => setLoading(false));
-  }, [])
-
-  return { spells, isLoading };
+  const fetcher = useCallback((signal: AbortSignal) => getSpells(signal), [])
+  return useFetch(fetcher)
 }
