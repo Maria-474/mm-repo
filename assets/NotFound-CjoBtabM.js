@@ -1,0 +1,1 @@
+import{b as n,j as t,A as s}from"./index-DvAI7vo-.js";import{A as a}from"./AppTitle-C3r8emwE.js";const e="_notFoundWrapper_8kgcm_1",r={notFoundWrapper:e};function i(){const o=n();return t.jsxs("div",{className:r.notFoundWrapper,children:[t.jsx(a,{text:"Page not found"}),t.jsx(s,{text:"Go to main",onButtonClick:()=>o("/")})]})}export{i as default};
